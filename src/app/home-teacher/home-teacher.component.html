@@ -1,0 +1,26 @@
+<app-header-teacher></app-header-teacher>
+<h1><p>College Internships Offered</p></h1>
+
+  <mat-grid-list cols="3" >
+
+    <mat-grid-tile *ngFor="let internship of internships$">
+        <mat-card>
+          <mat-card-header>
+            <div mat-card-avatar>
+              </div>
+              <mat-card-title>{{internship.company}}</mat-card-title>
+              <mat-card-subtitle>{{internship.position}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src= {{internship.imageURL}} width="300" height="168">
+            <mat-card-content>
+              <p>Start Date: {{internship.startDate}} </p>
+              <p>Duration: {{internship.duration}}</p>
+              <p>Stipend: {{internship.stipend}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button color = "primary" (click)="openDialog_1(internship.id)">VIEW RESPONSES</button>
+          <button mat-button color = "primary" (click)="openDialog(internship.id)">VIEW DETAILS</button>
+            </mat-card-actions>
+        </mat-card>
+       </mat-grid-tile>
+</mat-grid-list>

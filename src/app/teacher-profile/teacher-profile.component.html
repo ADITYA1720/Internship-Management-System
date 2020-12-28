@@ -1,0 +1,120 @@
+<app-header-teacher></app-header-teacher>
+
+<div class="container" style="padding-top: 7%;">
+
+    <div class="row">
+        <div class="col-sm-4">
+            <mat-card class="mat-elevation-z8">
+                <mat-card-header>
+                    <mat-card-title>
+                        <mat-icon style="color:linear-gradient(black,indigo); font-size:20px; vertical-align: bottom;">
+                            perm_identity</mat-icon>
+                        Profile
+                    </mat-card-title>
+                    <mat-card-subtitle>
+                        ID: {{teacherID}}
+                    </mat-card-subtitle>
+                </mat-card-header>
+                <mat-divider></mat-divider>
+                <mat-card-content>
+                    <br>
+                    <h5>Teacher Information: <button mat-button style="margin-left:15%;">
+                            <mat-icon style="color:indigo;">edit</mat-icon>
+                        </button></h5>
+                    <table class="table table-striped table-hover table-condensed">
+                        <tbody>
+                            <tr>
+                                <td>Name:</td>
+                                <td>{{teacherName}}</td>
+                            </tr>
+                            <tr>
+                                <td>Department:</td>
+                                <td>{{teacherDepartment}}</td>
+                            </tr>
+                            <tr>
+                                <td>Email:</td>
+                                <td>{{teacherEmail}}%</td>
+                            </tr>
+                            <tr>
+                                <td>Role:</td>
+                                <td>{{teacherRole}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col-sm-8">
+            <mat-card>
+                <mat-card-header></mat-card-header>
+                <mat-card-content>
+                    <mat-tab-group mat-align-tabs="center">
+                        
+                        <mat-tab label="Internship Details" style="height: 400px;">
+                            <br>
+                            <div class="container">
+                                <br>
+                                <div class="parent">
+                                    <mat-form-field>
+                                        <mat-label>Company</mat-label>
+                                        <input matInput type="text" value="{{companyField}}" (input)="companyField=$event.target.value">
+                                    </mat-form-field> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+
+                                    <mat-form-field>
+                                        <mat-label>Position</mat-label>
+                                        <input matInput type="text" value="{{positionField}}" (input)="positionField=$event.target.value">
+                                    </mat-form-field> <br>
+
+                                    <mat-form-field [style.width.px]=140>
+                                        <mat-label>Duration</mat-label>
+                                        <input matInput type="text" class="center" value="{{durationField}}" (input)="durationField=$event.target.value">
+                                    </mat-form-field> 
+                                    <mat-label>weeks</mat-label> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+
+                                    <mat-form-field>
+                                        <mat-label>Stipend</mat-label>
+                                        <input matInput type="text" value="{{stipendField}}" (input)="stipendField=$event.target.value">
+                                    </mat-form-field> <br>
+
+                                    <mat-form-field>
+                                        <mat-label>Department</mat-label>
+                                        <input matInput type="text" value="{{departmentField}}" (input)="departmentField=$event.target.value">
+                                    </mat-form-field> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+
+                                    <mat-form-field>
+                                        <mat-label>Company logo (Image URL)</mat-label>
+                                        <input matInput type="text" value="{{imageURLField}}" (input)="imageURLField=$event.target.value">
+                                    </mat-form-field>    
+                                </div>
+                                <mat-divider></mat-divider> <br>
+                                <h5>Duration Details:</h5>
+                                <div class="container">
+                                    <mat-form-field>
+                                        <mat-label>Start Date</mat-label>
+                                        <input matInput type="date" value="{{startDateField}}" (input)="startDateField=$event.target.value">
+                                    </mat-form-field> &nbsp; &nbsp; &nbsp;
+
+                                    <mat-form-field>
+                                        <mat-label>End Date</mat-label>
+                                        <input matInput type="date" value="{{endDateField}}" (input)="endDateField=$event.target.value">
+                                    </mat-form-field>
+                                </div>
+                                <mat-divider></mat-divider> <br>
+                                <h5>Description:</h5>
+                                <div class="container">
+                                    <mat-form-field appearance="outline" style="width:620px;">
+                                        <textarea matInput type="text" value="{{descriptionField}}" style="height: 60px;" (input)="descriptionField=$event.target.value"></textarea>
+                                    </mat-form-field> &nbsp; &nbsp; &nbsp;
+                                </div>
+                                <mat-divider></mat-divider> <br>
+                                <div align="center">
+                                    <button type="Submit" mat-raised-button color="primary" (click) = "submitDetails()">Add Internship</button>
+                                </div>
+                            </div>    
+                        </mat-tab>
+                    </mat-tab-group>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>

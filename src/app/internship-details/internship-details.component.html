@@ -1,0 +1,32 @@
+<h2 mat-dialog-title  style="font-weight: bold;">Internship Details</h2>
+<mat-dialog-content class="mat-typography">
+
+<h3 style="font-weight: bold;"  >Company</h3>
+  <p>{{data['internshipDetails'][0].company}}</p>
+
+  <h3  style="font-weight: bold;">Position </h3>
+  <p>{{data['internshipDetails'][0].position}}</p>
+
+  <h3  style="font-weight: bold;">Stipend</h3>
+  <p>{{data['internshipDetails'][0].stipend}}</p>
+
+  <h3  style="font-weight: bold;">Duration </h3>
+  <p>{{data['internshipDetails'][0].duration}} weeks</p>
+
+  <h3  style="font-weight: bold;">Start Date</h3>
+  <p>{{data['internshipDetails'][0].startDate}}</p>
+
+  <h3  style="font-weight: bold;">End Date</h3>
+  <p >{{data['internshipDetails'][0].endDate}}</p>
+
+  <h3  style="font-weight: bold;">Description </h3>
+  <p >{{data['internshipDetails'][0].description}}</p>
+
+  <h3  style="font-weight: bold;">Branch</h3>
+  <p>{{data['internshipDetails'][0].branch}}</p>
+
+  
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>

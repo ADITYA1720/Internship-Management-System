@@ -1,0 +1,10 @@
+.mat-success {
+    background-color: green;
+    color: #fff;
+}
+.alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
+}

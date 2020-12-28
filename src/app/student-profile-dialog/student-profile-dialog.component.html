@@ -1,0 +1,57 @@
+<mat-dialog-content class="mat-typography">
+<mat-card style="width:100%;">
+    <mat-card-header>
+        <mat-card-title>
+            <mat-icon style="color:linear-gradient(black,white); font-size:20px; vertical-align: bottom;">
+                perm_identity</mat-icon>
+            Student Profile
+        </mat-card-title>
+        <mat-card-subtitle>
+            Registration ID: {{data['studentDetails'].id}}
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+        <table class="table table-striped table-hover table-condensed">
+            <tbody>
+                <tr>
+                    <td>Name:</td>
+                    <td>{{data['studentDetails'].name}}</td>
+                </tr>
+                <tr>
+                    <td>Roll No:</td>
+                    <td>{{data['studentDetails'].rollNumber}}</td>
+                </tr>
+                <tr>
+                    <td>Attendance:</td>
+                    <td>{{data['studentDetails'].attendance}}%</td>
+                </tr>
+                <tr>
+                    <td>CGPA:</td>
+                    <td>{{data['studentDetails'].CGPA}}</td>
+                </tr>
+                <tr>
+                    <td>Department:</td>
+                    <td>{{data['studentDetails'].department}}</td>
+                </tr>
+                <tr>
+                    <td>Class:</td>
+                    <td>{{data['studentDetails'].class}}</td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td>{{data['studentDetails'].email}}</td>
+                </tr>
+                <tr>
+                    <td>Resume:</td>
+                    <td><a href="http://127.0.0.1:5000/api/download-student-resume/{{data['studentDetails'].id}}/{{data['internshipID']}}"><button mat-button color = "primary">DOWNLOAD RESUME</button></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </mat-card-content>
+</mat-card>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>
+
